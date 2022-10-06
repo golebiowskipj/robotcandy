@@ -43,22 +43,22 @@ const logPositions = () => {
 };
 
 const logSuccess = () => {
-  console.log(
+  console.info(
     `%c You scored at x:${robot.x}, y:${robot.y}. Your score is: ${score}`,
     "background: #222; color: #bada55"
   );
 };
 
 const logNewGame = () => {
-  console.log(`%c START`, "background: #222; color: #bada55");
+  console.info(`%c NEW GAME`, "background: #222; color: #bada55");
 };
 
 const logInstructions = () => {
-  console.log("Use keyboard arrows to move the robot");
-  console.log("Match robot's and candy's x and y coordinates");
-  console.log("Top left corner is 0,0");
-  console.log("x grows from left to right.");
-  console.log("y grows from top to bottom.");
+  console.info("Use keyboard arrows to move the robot");
+  console.info("Match robot's and candy's x and y coordinates");
+  console.info("Top left corner is 0,0");
+  console.info("x grows from left to right.");
+  console.info("y grows from top to bottom.");
 }
 
 // THE GAME
