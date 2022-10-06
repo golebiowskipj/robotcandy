@@ -90,7 +90,7 @@ const moveRobot = ({ key }) => {
       return;
   }
 
-  logPositions();
+
 
   if (robot.x === candy.x && robot.y === candy.y) {
     score++;
@@ -98,7 +98,10 @@ const moveRobot = ({ key }) => {
     logNewGame();
     generateCandy();
     logPositions();
+    return;
   }
+  
+    logPositions();
 };
 
 // INIT
