@@ -44,7 +44,7 @@ const logPositions = () => {
 
 const logSuccess = () => {
   console.log(
-    `%c Your scored at x:${robot.x}, y:${robot.y}. Your score is: ${score}`,
+    `%c You scored at x:${robot.x}, y:${robot.y}. Your score is: ${score}`,
     "background: #222; color: #bada55"
   );
 };
@@ -52,6 +52,14 @@ const logSuccess = () => {
 const logNewGame = () => {
   console.log(`%c START`, "background: #222; color: #bada55");
 };
+
+const logInstructions = () => {
+  console.log("Use keyboard arrows to move the robot");
+  console.log("Match robot's and candy's x and y coordinates");
+  console.log("Top left corner is 0,0");
+  console.log("x grows from left to right.");
+  console.log("y grows from top to bottom.");
+}
 
 // THE GAME
 const generateCandy = () => {
@@ -96,6 +104,7 @@ const moveRobot = ({ key }) => {
     score++;
     logSuccess();
     logNewGame();
+    logInstructions();
     generateCandy();
     logPositions();
     return;
