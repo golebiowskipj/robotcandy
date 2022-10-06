@@ -102,10 +102,9 @@ const moveRobot = ({ key }) => {
 
   if (robot.x === candy.x && robot.y === candy.y) {
     score++;
+    generateCandy();
     logSuccess();
     logNewGame();
-    logInstructions();
-    generateCandy();
     logPositions();
     return;
   }
@@ -115,6 +114,7 @@ const moveRobot = ({ key }) => {
 
 // INIT
 const init = () => {
+  logInstructions();
   logNewGame();
   generateRobot();
   generateCandy();
